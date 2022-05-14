@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">coco and toto</string>
+    <string name="coco_toto"><![CDATA[CoCo & ToTO]]></string>
+    <string name="coco_toto1"><![CDATA[CoCo & ToTo]]></string>
+    <string name="todo">TODO</string>
+    <string name="CoConToTo"><![CDATA[CoCo & ToTo]]></string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="edit_log_email" />
+    <string name="edit_log_pwd" />
+    <string name="textView_pwd">Password</string>
+    <string name="btn_log">Login</string>
+    <string name="btn_signup">Signup</string>
+    <string name="service">Service</string>
+    <string name="customer">Customer</string>
+    <string name="newAcc">Create New Account</string>
+    <string name="name">Full Name</string>
+    <string name="address">Address</string>
+    <string name="phoneNo">Phone No</string>
+    <string name="password">Password</string>
+    <string name="LEmail">Email</string>
+    <string name="btn_sub">Register</string>
+</resources>
