@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CocoAndToto">
         <activity
+            android:name=".edit_form_2"
+            android:exported="false" />
+        <activity
+            android:name=".Choose2"
+            android:exported="false" />
+        <activity
+            android:name=".edit_profile"
+            android:exported="false" />
+        <activity
+            android:name=".profile"
+            android:exported="false" />
+        <activity
             android:name=".form_1"
             android:exported="false" />
         <activity

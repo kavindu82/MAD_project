@@ -48,28 +48,28 @@ public class form_1 extends AppCompatActivity {
                 final String Adresstext = c_address.getText().toString();
                 final String mailtext = c_mail1.getText().toString();
                 final String contacttext = c_contact.getText().toString();
-                final String passtext = c_pass.getText().toString();
+                final String Passwordtext = c_pass.getText().toString();
 
-                if(nametext.isEmpty() || Adresstext.isEmpty() || mailtext.isEmpty() || contacttext.isEmpty() ||passtext.isEmpty() ){
+                if(nametext.isEmpty() || Adresstext.isEmpty() || mailtext.isEmpty() || contacttext.isEmpty() ||Passwordtext.isEmpty() ){
                     Toast.makeText(form_1.this, "Please fill all fields", Toast.LENGTH_SHORT).show();
                 }
-              //  else if (passtext.length()<5){
-                //    Toast.makeText(form_1.this, "Minimum password length should be 5 characters", Toast.LENGTH_SHORT).show();
-               // }
+
                 else {
                     databaseReference.child("Profile").addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
-                            if(snapshot.hasChild(mailtext)){
+                            if(snapshot.hasChild(nametext)){
                                 Toast.makeText(form_1.this, "User name is already registered", Toast.LENGTH_SHORT).show();
                             }else {
-                                databaseReference.child("Profile").child(mailtext).child("Name").setValue(nametext);
-                                databaseReference.child("Profile").child(mailtext).child("adress").setValue(Adresstext);
-                                databaseReference.child("Profile").child(mailtext).child("mail").setValue(mailtext);
-                                databaseReference.child("Profile").child(mailtext).child("contact").setValue(contacttext);
-                                databaseReference.child("Profile").child(mailtext).child("pass").setValue(passtext);
+                                databaseReference.child("Profile").child(nametext).child("Name").setValue(nametext);
+                                databaseReference.child("Profile").child(nametext).child("adress").setValue(Adresstext);
+                                databaseReference.child("Profile").child(nametext).child("mail").setValue(mailtext);
+                                databaseReference.child("Profile").child(nametext).child("contact").setValue(contacttext);
+                                databaseReference.child("Profile").child(nametext).child("pass").setValue(Passwordtext);
 
                                 Toast.makeText(form_1.this, "User register Successfully", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(getApplicationContext(),form_2.class);
+                                startActivity(intent);
                                 finish();
 
                             }
@@ -94,90 +94,3 @@ public class form_1 extends AppCompatActivity {
     }
 }
 
-/* }
-
-    @Override
-    public void onClick(View v) {
-
-        switch (v.getId()){
-            case R.id.CoConToTo:
-                startActivity(new Intent(this,MainActivity.class));
-                break;
-            case R.id.c_btn_sub:
-               btn_sub();
-                break;
-        }
-
-    }
-
-    private void btn_sub() {
-
-        String name = nameC.getText().toString().trim();
-        String address = addressC.getText().toString().trim();
-        String email = mail1C.getText().toString().trim();
-        String contact = contactC.getText().toString().trim();
-        String pwd = passC.getText().toString().trim();
-
-        if(name.isEmpty()){
-            nameC.setError("Name is required");
-            nameC.requestFocus();
-            return;
-        }
-
-
-        if(address.isEmpty()){
-            addressC.setError(" address is required");
-            addressC.requestFocus();
-            return;
-        }
-
-        if(email.isEmpty()){
-            mail1C.setError("Email is required");
-            mail1C.requestFocus();
-            return;
-        }
-
-
-
-        if(contact.isEmpty()){
-            contactC.setError("Phone number is required");
-            contactC.requestFocus();
-            return;
-        }
-
-        if(pwd.isEmpty()){
-            passC.setError("Password is required");
-            passC.requestFocus();
-            return;
-        }
-
-        if(pwd.length()<5){
-            passC.setError("Minimum password length should be 5 characters");
-            passC.requestFocus();
-            return;
-        }
-
-
-        mAuth.createUserWithEmailAndPassword(email,pwd).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if(task.isSuccessful()){
-                   profile_form_1 proF =new profile_form_1(name,email,address,pwd,contact );
-
-                   FirebaseDatabase.getInstance().getReference("profile").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                           .setValue(proF).addOnCompleteListener(new OnCompleteListener<Void>() {
-                       @Override
-                       public void onComplete(@NonNull Task<Void> task) {
-
-                           if(task.isSuccessful()){
-                               Toast.makeText(form_1.this, "Register Successful", Toast.LENGTH_SHORT).show();
-
-                           }else{
-                               Toast.makeText(form_1.this, "Register Failed", Toast.LENGTH_SHORT).show();
-                           }
-                       }
-                   });
-                }
-
-            }
-        });*/

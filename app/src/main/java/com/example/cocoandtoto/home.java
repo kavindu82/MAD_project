@@ -22,7 +22,7 @@ public class home extends AppCompatActivity {
         image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(home.this,Login.class);
+                Intent intent = new Intent(home.this,Choose.class);
                 startActivity(intent);
             }
         });

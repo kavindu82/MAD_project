@@ -22,14 +22,14 @@ public class Choose extends AppCompatActivity {
         BtnServices.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Choose.this,form_2.class);
+                Intent intent = new Intent(Choose.this,Login.class);
                 startActivity(intent);
             }
         });
         BtnCustomer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Choose.this, Recycle_view.class);
+                Intent intent = new Intent(Choose.this, form_2.class);
                 startActivity(intent);
             }
         });

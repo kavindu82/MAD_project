@@ -174,16 +174,7 @@
                     android:textColor="#fff"
                     android:textSize="20sp" />
 
-                <TextView
-                    android:id="@+id/backButton"
-                    android:text="Already registered? Sign In"
-                    android:layout_marginTop="15dp"
-                    android:textSize="20sp"
-                    android:textColor="#000"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>

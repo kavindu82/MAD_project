@@ -98,13 +98,13 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/mail"
+                    android:id="@+id/name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:drawableStart="@drawable/ic_mail"
                     android:drawablePadding="10dp"
-                    android:hint="Enter User Name"
+                    android:hint="Enter Email"
                     android:inputType="textEmailAddress"
                     android:textColor="#000"
                     android:textColorHint="#000"

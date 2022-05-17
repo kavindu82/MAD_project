@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#82E0AA"
+    tools:context=".profile">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-50dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        android:elevation="10dp"
+        android:background="#82E0AA"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#82E0AA"
+            android:elevation="10dp"
+            android:orientation="vertical"
+            android:padding="20dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="0dp"
+                android:background="#fff"
+                android:elevation="10dp"
+                android:orientation="vertical"
+                android:padding="20dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <ImageView
+
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/logo2" />
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center"
+                    android:text="Hello, Welcome"
+                    android:textColor="#000"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="0dp"
+                android:background="#fff"
+                android:elevation="10dp"
+                android:orientation="vertical"
+                android:padding="20dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center"
+                    android:text="Profile"
+                    android:textColor="#000"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:padding="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Full Name"
+                    android:textStyle="italic"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:drawableStart="@drawable/ic_person"/>
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:gravity="left"
+                    android:hint="Full name"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Password"
+                    android:textStyle="italic"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:drawableStart="@drawable/ic_lock"/>
+                <TextView
+                    android:id="@+id/password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:gravity="left"
+                    android:hint=" password:"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" Address"
+                    android:textStyle="italic"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:drawableStart="@drawable/ic_home"/>
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:gravity="left"
+                    android:hint="Address :"
+                    android:textColor="#000"
+                    android:textSize="20sp"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Email Address"
+                    android:textStyle="italic"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:drawableStart="@drawable/ic_mail"/>
+
+                <TextView
+                    android:id="@+id/Email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:gravity="left"
+                    android:hint=" Email :"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Phone No"
+                    android:textStyle="italic"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:drawableStart="@drawable/ic_phone"/>
+                <TextView
+                    android:id="@+id/phoneno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="left"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:hint=" Phone Number:"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+
+                <Button
+                    android:id="@+id/UpdateButton"
+                    android:layout_width="98dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/password"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="10dp"
+                    android:drawableStart="@drawable/ic_person"
+                    android:text="Edit profile"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/DeleteButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/password"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="-50dp"
+                    android:layout_toRightOf="@+id/UpdatButton"
+                    android:text="Delete"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="20sp" />
+
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="0dp"
+                android:background="#fff"
+                android:elevation="10dp"
+                android:orientation="vertical"
+                android:padding="20dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center"
+                    android:text="Boarding Details"
+                    android:textColor="#000"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:padding="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Boarding House Name"
+                    android:textStyle="italic"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:drawableStart="@drawable/ic_person"/>
+                <TextView
+                    android:id="@+id/bName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:gravity="left"
+                    android:hint="Boarding House Name"
+                    android:textColor="#000"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Town"
+                    android:textStyle="italic"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:drawableStart="@drawable/ic_lock"/>
+                <TextView
+                    android:id="@+id/twn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:gravity="left"
+                    android:hint=" town:"
+                    android:textColor="#000"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="What pet You accept"
+                    android:textStyle="italic"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:drawableStart="@drawable/ic_home"/>
+                <TextView
+                    android:id="@+id/pAccept"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:gravity="left"
+                    android:hint="What pet You accept"
+                    android:textColor="#000"
+                    android:textSize="15sp"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="How many pets can you watch"
+                    android:textStyle="italic"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:drawableStart="@drawable/ic_mail"/>
+
+                <TextView
+                    android:id="@+id/pWatch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:gravity="left"
+                    android:hint=" How many pets can you watch"
+                    android:textColor="#000"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Where will pets lest at your home"
+                    android:textStyle="italic"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:drawableStart="@drawable/ic_phone"/>
+                <TextView
+                    android:id="@+id/pLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="left"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:hint=" Where will pets lest at your home"
+                    android:textColor="#000"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="How many days can you watch"
+                    android:textStyle="italic"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:drawableStart="@drawable/ic_phone"/>
+                <TextView
+                    android:id="@+id/pDays"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="left"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:hint=" How many days can you watch"
+                    android:textColor="#000"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Emergency Transport"
+                    android:textStyle="italic"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:drawableStart="@drawable/ic_phone"/>
+                <TextView
+                    android:id="@+id/pEme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="left"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:hint=" Emergency Transport"
+                    android:textColor="#000"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Contact"
+                    android:textStyle="italic"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:drawableStart="@drawable/ic_phone"/>
+                <TextView
+                    android:id="@+id/pContact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="left"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:hint=" Contact"
+                    android:textColor="#000"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
+
+
+                <Button
+                    android:id="@+id/pUpdateButton"
+                    android:layout_width="98dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/password"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="10dp"
+                    android:drawableStart="@drawable/ic_person"
+                    android:text="Edit profile"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/pDeleteButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/password"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="-50dp"
+                    android:layout_toRightOf="@+id/UpdatButton"
+                    android:text="Delete"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="20sp" />
+
+
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+</ScrollView>
+
+
+

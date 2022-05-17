@@ -31,31 +31,44 @@ public class Login extends AppCompatActivity  {
 
         final Button LogButton = findViewById(R.id.LogButton);
         final TextInputEditText Password = findViewById(R.id.Password);
-        final TextInputEditText mail = findViewById(R.id.mail);
+        final TextInputEditText name = findViewById(R.id.name);
 
         backButton = findViewById(R.id.backButton);
 
         LogButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final String mailtext = mail.getText().toString();
+                final String nametext = name.getText().toString();
                 final String Passwordtext = Password.getText().toString();
 
-                if(mailtext.isEmpty() || Passwordtext.isEmpty()){
-                    Toast.makeText(Login.this, "Please enter Your user name or password", Toast.LENGTH_SHORT).show();
+                if(nametext.isEmpty() || Passwordtext.isEmpty()){
+                    Toast.makeText(Login.this, "Please enter Your name or password", Toast.LENGTH_SHORT).show();
                 }else {
                     databaseReference.child("Profile").addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
                             //check if username
-                            if(snapshot.hasChild(mailtext)){
-                                final String getPassword = snapshot.child(mailtext).child("pass").getValue(String.class);
+                            if(snapshot.hasChild(nametext)){
+                                final String getPassword = snapshot.child(nametext).child("pass").getValue(String.class);
 
                                 if(getPassword.equals(Passwordtext)){
                                     Toast.makeText(Login.this, "Successfully Logged in", Toast.LENGTH_SHORT).show();
                                     //startActivity(new Intent(LoginActivity.this,Shop.class));
 
-                                    Intent intent = new Intent(Login.this,Recycle_view.class);
+                                    String UsernameFromDB = snapshot.child(nametext).child("Name").getValue(String.class);
+                                    String passwordFromDB = snapshot.child(nametext).child("pass").getValue(String.class);
+                                    String addressFromDB = snapshot.child(nametext).child("adress").getValue(String.class);
+                                    String contactFromDB = snapshot.child(nametext).child("contact").getValue(String.class);
+                                    String mailFromDB = snapshot.child(nametext).child("mail").getValue(String.class);
+
+                                    Intent intent = new Intent(Login.this, profile.class);
+
+                                    intent.putExtra( "Name",UsernameFromDB);
+                                    intent.putExtra( "Pass",passwordFromDB);
+                                    intent.putExtra( "mail",mailFromDB);
+                                    intent.putExtra( "contact",contactFromDB);
+                                    intent.putExtra( "adress",addressFromDB);
+
 
                                     startActivity(intent);
 
@@ -78,12 +91,6 @@ public class Login extends AppCompatActivity  {
 
             }
         });
-
-
-
-
-
-
 
 
         backButton.setOnClickListener(new View.OnClickListener() {
