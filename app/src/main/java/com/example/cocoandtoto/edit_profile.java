@@ -25,11 +25,7 @@ import java.util.HashMap;
 
 public class edit_profile extends AppCompatActivity {
 
-    private TextView Username,backBtn;
-    private TextView password;
-    private TextView address;
-    private TextView Email;
-    private TextView Contact;
+    private TextView backBtn;
     private Button ConformButton;
 
     DatabaseReference user;
@@ -43,10 +39,10 @@ public class edit_profile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_profile);
 
-        final TextInputEditText userName = findViewById(R.id.userName);
+        final TextView userName = findViewById(R.id.userName);
         final TextInputEditText Password = findViewById(R.id.Password);
         final TextInputEditText address = findViewById(R.id.address);
-        final TextView email = findViewById(R.id.email);
+        final TextInputEditText email = findViewById(R.id.email);
         final TextInputEditText phone = findViewById(R.id.phone);
 
         ConformButton = findViewById(R.id.conformBtn);

@@ -49,10 +49,10 @@
                 android:layout_height="150dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:src="@drawable/logo2"/>
+                android:src="@drawable/person"/>
             <TextView
 
-                android:text="Profile UpDate"
+                android:text="Profile Update"
                 android:textColor="#000"
                 android:textSize="30dp"
                 android:textStyle="bold"
@@ -130,7 +130,7 @@
                 android:textColorHint="#000"
                 android:textSize="18sp" />
 
-            <TextView
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

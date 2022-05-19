@@ -47,7 +47,8 @@
                     android:layout_height="150dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="20dp"
-                    android:src="@drawable/logo2" />
+                    android:background="#9DDDDF"
+                    android:src="@drawable/pe" />
 
                 <TextView
 
@@ -90,53 +91,53 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/userName"
+                    android:id="@+id/bName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:drawableStart="@drawable/ic_person"
                     android:drawablePadding="10dp"
                     android:inputType="textPersonName"
-                    android:text="Full Name"
+                    android:text="Boarding House Name"
                     android:textColor="#000"
                     android:textColorHint="#000"
                     android:textSize="18sp"
                     tools:ignore="TouchTargetSizeCheck" />
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/Password"
+                    android:id="@+id/town"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:drawableStart="@drawable/ic_lock"
                     android:drawablePadding="10dp"
-                    android:inputType="textPassword"
-                    android:text="Password"
+                    android:inputType="text"
+                    android:text="Town"
                     android:textColor="#000"
                     android:textColorHint="#000"
                     android:textSize="18sp"
                     tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/address"
+                    android:id="@+id/pAccept"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_home"
                     android:drawablePadding="10dp"
-                    android:text="Address"
+                    android:text="What pet You accept"
                     android:layout_marginBottom="10dp"
                     android:inputType="textPostalAddress"
                     android:textColor="#000"
                     android:textColorHint="#000"
                     android:textSize="18sp" />
 
-                <TextView
-                    android:id="@+id/email"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/pWatch"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_mail"
                     android:drawablePadding="10dp"
-                    android:text="Email"
+                    android:text="How many pets can you watch"
                     android:inputType="textEmailAddress"
                     android:layout_marginBottom="10dp"
                     android:textColor="#000"
@@ -144,46 +145,46 @@
                     android:textSize="18sp" />
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/phone"
+                    android:id="@+id/pLeft"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_phone"
                     android:drawablePadding="10dp"
                     android:layout_marginBottom="10dp"
-                    android:text="Contact"
+                    android:text="Where will pets lest at your home"
+                    android:inputType="text"
+                    android:textColor="#000"
+                    android:textColorHint="#000"
+                    android:textSize="18sp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/pDays"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_phone"
+                    android:drawablePadding="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="How many days can you watch"
+                    android:inputType="text"
+                    android:textColor="#000"
+                    android:textColorHint="#000"
+                    android:textSize="18sp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/pEme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_phone"
+                    android:drawablePadding="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Emergency Transport"
                     android:inputType="phone"
                     android:textColor="#000"
                     android:textColorHint="#000"
                     android:textSize="18sp" />
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/phone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:drawableStart="@drawable/ic_phone"
-                    android:drawablePadding="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="Contact"
-                    android:inputType="phone"
-                    android:textColor="#000"
-                    android:textColorHint="#000"
-                    android:textSize="18sp" />
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/phone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:drawableStart="@drawable/ic_phone"
-                    android:drawablePadding="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="Contact"
-                    android:inputType="phone"
-                    android:textColor="#000"
-                    android:textColorHint="#000"
-                    android:textSize="18sp" />
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/phone"
+                    android:id="@+id/pCon"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_phone"
@@ -196,7 +197,7 @@
                     android:textSize="18sp" />
 
                 <Button
-                    android:id="@+id/conformBtn"
+                    android:id="@+id/pConformBtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -207,7 +208,7 @@
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/backBtn"
+                    android:id="@+id/pBackBtn"
                     android:text="Back to Profile?"
                     android:layout_marginTop="15dp"
                     android:textSize="20sp"

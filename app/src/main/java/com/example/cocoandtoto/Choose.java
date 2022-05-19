@@ -29,7 +29,7 @@ public class Choose extends AppCompatActivity {
         BtnCustomer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Choose.this, form_2.class);
+                Intent intent = new Intent(Choose.this, detailList.class);
                 startActivity(intent);
             }
         });

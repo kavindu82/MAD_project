@@ -26,8 +26,10 @@ public class profile extends AppCompatActivity {
     private TextView address;
     private TextView Email;
     private TextView phoneno;
+    private Button  UpdateButton,DeleteButton ,HomeButton;
 
-    private Button  UpdateButton,DeleteButton;
+    private TextView bName ,twn ,pAccept,pWatch,pLeft,pDays,pEme,pContact;
+    private  Button pUpdateButton ,pDeleteButton;
 
     DatabaseReference user;
     String userID;
@@ -49,6 +51,7 @@ public class profile extends AppCompatActivity {
 
         UpdateButton = findViewById(R.id.UpdateButton);
         DeleteButton = findViewById(R.id.DeleteButton);
+       HomeButton = findViewById(R.id.pHomeButton);
 
         Intent intent = getIntent();
         final String name = String.valueOf(intent.getStringExtra("Name"));
@@ -100,8 +103,82 @@ public class profile extends AppCompatActivity {
 
         });
 
+        bName = findViewById(R.id.bName);
+        twn = findViewById(R.id.twn);
+        pAccept = findViewById(R.id.pAccept);
+        pWatch = findViewById(R.id.pWatch);
+        pLeft = findViewById(R.id.pLeft);
+        pDays = findViewById(R.id. pDays);
+        pEme = findViewById(R.id. pEme);
+        pContact = findViewById(R.id.pContact);
 
+        pUpdateButton = findViewById(R.id.pUpdateButton);
+        pDeleteButton = findViewById(R.id.pDeleteButton);
 
+        //Intent intent = getIntent();
+        final String b_name = String.valueOf(intent.getStringExtra("bName"));
 
+        databaseReference.child("Dataset").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                String BoardingNameFromDB = snapshot.child(b_name).child("bName").getValue(String.class);
+                String townFromDB = snapshot.child(b_name).child("twn").getValue(String.class);
+                String acceptFromDB = snapshot.child(b_name).child("pAccept").getValue(String.class);
+                String watchFromDB = snapshot.child(b_name).child("pWatch").getValue(String.class);
+                String leftFromDB = snapshot.child(b_name).child("pLeft").getValue(String.class);
+                String daysFromDB = snapshot.child(b_name).child("pDays").getValue(String.class);
+                String emergencyFromDB = snapshot.child(b_name).child("pEme").getValue(String.class);
+                String ContactFromDB = snapshot.child(b_name).child("pContact").getValue(String.class);
+
+                bName.setText(BoardingNameFromDB);
+                twn.setText(townFromDB);
+                pAccept .setText(acceptFromDB);
+                pWatch.setText(watchFromDB );
+                pLeft.setText(leftFromDB);
+                pDays.setText(daysFromDB);
+                pEme.setText(emergencyFromDB);
+                pContact.setText(ContactFromDB);
+
+                UpdateButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        Intent intent = new Intent(getApplicationContext(),edit_form_2.class);
+
+                        intent.putExtra( "bName",BoardingNameFromDB);
+                        startActivity(intent);
+                    }
+                });
+
+                DeleteButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        user = databaseReference.child(BoardingNameFromDB);
+                        userID = user.getKey();
+                        databaseReference.child("Dataset").child(userID).setValue(null);
+                        Intent intent = new Intent(profile.this,home.class);
+                        startActivity(intent);
+                    }
+                });
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+
+        });
+
+        HomeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(profile.this, home.class);
+                startActivity(intent);
+            }
+        });
     }
+
+
 }

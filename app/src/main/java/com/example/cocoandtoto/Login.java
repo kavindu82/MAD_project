@@ -61,6 +61,7 @@ public class Login extends AppCompatActivity  {
                                     String contactFromDB = snapshot.child(nametext).child("contact").getValue(String.class);
                                     String mailFromDB = snapshot.child(nametext).child("mail").getValue(String.class);
 
+
                                     Intent intent = new Intent(Login.this, profile.class);
 
                                     intent.putExtra( "Name",UsernameFromDB);
@@ -68,6 +69,7 @@ public class Login extends AppCompatActivity  {
                                     intent.putExtra( "mail",mailFromDB);
                                     intent.putExtra( "contact",contactFromDB);
                                     intent.putExtra( "adress",addressFromDB);
+
 
 
                                     startActivity(intent);
@@ -87,9 +89,11 @@ public class Login extends AppCompatActivity  {
                         }
                     });
 
+                    }
+
                 }
 
-            }
+
         });
 
 
